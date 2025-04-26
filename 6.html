@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮胎行业创新观察</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .slide-content {
+            padding: 50px 60px;
+            height: calc(100% - 100px);
+        }
+        .header {
+            height: 60px;
+            border-bottom: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+        .footer {
+            height: 40px;
+            border-top: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 120px);
+        }
+        .title {
+            color: #0a3d62;
+            line-height: 1.2;
+        }
+        .blue-bar {
+            height: 5px;
+            width: 80px;
+            background-color: #0a3d62;
+            margin-bottom: 20px;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0a3d62;
+        }
+        .innovation-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .card-header {
+            background-color: #0a3d62;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .card-body {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .bullet-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .bullet-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .bullet-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            background-color: #0a3d62;
+            border-radius: 50%;
+        }
+        .cost-badge {
+            display: inline-block;
+            background-color: rgba(10,61,98,0.1);
+            border-left: 3px solid #0a3d62;
+            padding: 6px 10px;
+            margin-top: auto;
+        }
+        .chart-container {
+            height: 140px;
+            width: 100%;
+            position: relative;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <div class="logo">贝卡尔特研发中心</div>
+        </div>
+        
+        <div class="slide-content">
+            <h1 class="title text-3xl font-bold mb-4">轮胎行业创新观察</h1>
+            <div class="blue-bar"></div>
+            
+            <p class="text-gray-600 mb-6">轮胎行业正迈入"智能化+绿色化+数字化"三大创新浪潮，深刻改变产品形态与制造模式</p>
+            
+            <div class="grid grid-cols-3 gap-6 h-full" style="max-height: 520px;">
+                <!-- 智能化轮胎 -->
+                <div class="innovation-card">
+                    <div class="card-header">
+                        <div class="icon-circle">
+                            <i class="fas fa-microchip text-xl text-blue-800"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">智能化轮胎</h2>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h3 class="text-base font-medium text-gray-700 mb-3">观察重点</h3>
+                        
+                        <ul class="bullet-list mb-4">
+                            <li class="bullet-item">RFID芯片与传感器集成技术与整车CAN总线系统接入方式</li>
+                            <li class="bullet-item">实时胎压、温度、磨损与抓地力智能监测系统</li>
+                            <li class="bullet-item">冰雨路况下辅助紧急制动的智能轮胎管理方案</li>
+                            <li class="bullet-item">轮胎数据与车载OS交换接口与协议标准</li>
+                        </ul>
+                        
+                        <div class="cost-badge text-sm text-blue-800">
+                            <div class="font-medium mb-1">成本降低机会</div>
+                            <div>通过实时监控延长使用寿命，降低更换频率与燃油/电量消耗</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 绿色材料轮胎 -->
+                <div class="innovation-card">
+                    <div class="card-header">
+                        <div class="icon-circle">
+                            <i class="fas fa-leaf text-xl text-blue-800"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">绿色材料轮胎</h2>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h3 class="text-base font-medium text-gray-700 mb-3">观察重点</h3>
+                        
+                        <ul class="bullet-list mb-4">
+                            <li class="bullet-item">自密封胶层技术与静音绵材料在不同路况下的表现</li>
+                            <li class="bullet-item">生物基补强材料（如海洋硅藻体）在低滚阻轮胎中的应用</li>
+                            <li class="bullet-item">电动车专用低滚阻轮胎的能耗优化与噪声控制方案</li>
+                            <li class="bullet-item">可回收轮胎材料与全生命周期碳足迹评估</li>
+                        </ul>
+                        
+                        <div class="cost-badge text-sm text-blue-800">
+                            <div class="font-medium mb-1">成本降低机会</div>
+                            <div>生物基材料替代部分石化原料，降低原材料成本和环保合规支出</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 数字化转型 -->
+                <div class="innovation-card">
+                    <div class="card-header">
+                        <div class="icon-circle">
+                            <i class="fas fa-robot text-xl text-blue-800"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">数字化转型</h2>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h3 class="text-base font-medium text-gray-700 mb-3">观察重点</h3>
+                        
+                        <ul class="bullet-list mb-4">
+                            <li class="bullet-item">AI配方优化技术与传统配方研发的效率与成本对比</li>
+                            <li class="bullet-item">3D打印胎面样品的物理性能表现与批量化潜力</li>
+                            <li class="bullet-item">新型滑移测试方法与数据分析流程的自动化程度</li>
+                            <li class="bullet-item">AGV自动换模、伺服电机驱动与自动充气技术</li>
+                        </ul>
+                        
+                        <div class="cost-badge text-sm text-blue-800">
+                            <div class="font-medium mb-1">成本降低机会</div>
+                            <div>AI配方优化缩短研发周期40%，自动化硫化工艺节能15-20%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 class="text-blue-800 font-medium mb-2 flex items-center">
+                        <i class="fas fa-chart-line mr-2"></i> 轮胎行业创新影响分析
+                    </h3>
+                    <div class="chart-container">
+                        <canvas id="impactChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="text-sm text-gray-500">上海车展参观攻略 | 贝卡尔特技术研发视角</div>
+            <div class="text-sm text-gray-500">6</div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 创建图表
+            var ctx = document.getElementById('impactChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['成本降低潜力', '技术成熟度', '市场接受度', '环保合规性', '实施难度'],
+                    datasets: [
+                        {
+                            label: '智能化轮胎',
+                            data: [70, 65, 80, 75, 60],
+                            backgroundColor: 'rgba(10, 61, 98, 0.7)',
+                        },
+                        {
+                            label: '绿色材料轮胎',
+                            data: [60, 75, 65, 90, 50],
+                            backgroundColor: 'rgba(72, 126, 176, 0.7)',
+                        },
+                        {
+                            label: '数字化转型',
+                            data: [85, 70, 60, 65, 75],
+                            backgroundColor: 'rgba(133, 193, 233, 0.7)',
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                boxWidth: 12,
+                                padding: 8,
+                                font: {
+                                    family: "'Noto Sans SC', sans-serif",
+                                    size: 11
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.y + '%';
+                                }
+                            }
+                        }
+                    },
+                    barPercentage: 0.7
+                }
+            });
+        });
+    </script>
+</body>
+</html>

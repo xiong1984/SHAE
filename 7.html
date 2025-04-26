@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮胎企业参观检查表</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .slide-content {
+            padding: 50px 60px;
+            height: calc(100% - 100px);
+        }
+        .header {
+            height: 60px;
+            border-bottom: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+        .footer {
+            height: 40px;
+            border-top: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 120px);
+        }
+        .title {
+            color: #0a3d62;
+            line-height: 1.2;
+        }
+        .blue-bar {
+            height: 5px;
+            width: 80px;
+            background-color: #0a3d62;
+            margin-bottom: 20px;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0a3d62;
+        }
+        .checklist-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .checklist-table th {
+            background-color: #0a3d62;
+            color: white;
+            font-weight: 500;
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 0.95rem;
+        }
+        .checklist-table td {
+            padding: 12px 15px;
+            font-size: 0.9rem;
+            border-top: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        .checklist-table tr:nth-child(odd) td {
+            background-color: rgba(10,61,98,0.03);
+        }
+        .checklist-table tr:hover td {
+            background-color: rgba(10,61,98,0.06);
+        }
+        .area-cell {
+            font-weight: 500;
+            color: #1e3a5f;
+            width: 18%;
+        }
+        .objective-cell {
+            width: 35%;
+        }
+        .focus-cell {
+            width: 47%;
+        }
+        .icon-area {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .icon-area i {
+            background-color: rgba(10,61,98,0.1);
+            color: #0a3d62;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .focus-point {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 6px;
+        }
+        .focus-point:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            background-color: #0a3d62;
+            border-radius: 50%;
+        }
+        .priority-tag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 6px;
+        }
+        .high {
+            background-color: rgba(220,38,38,0.1);
+            color: #b91c1c;
+        }
+        .medium {
+            background-color: rgba(217,119,6,0.1);
+            color: #b45309;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <div class="logo">贝卡尔特研发中心</div>
+        </div>
+        
+        <div class="slide-content">
+            <h1 class="title text-3xl font-bold mb-4">轮胎企业参观检查表</h1>
+            <div class="blue-bar"></div>
+            
+            <p class="text-gray-600 mb-5">系统性检查以下关键领域，全面把握轮胎行业创新趋势与成本降低机会</p>
+            
+            <table class="checklist-table">
+                <thead>
+                    <tr>
+                        <th>观察领域</th>
+                        <th>目标</th>
+                        <th>关键关注点</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 智能化轮胎 -->
+                    <tr>
+                        <td class="area-cell">
+                            <div class="icon-area">
+                                <i class="fas fa-microchip"></i>
+                                <span>智能化轮胎</span>
+                                <span class="priority-tag high">优先</span>
+                            </div>
+                        </td>
+                        <td class="objective-cell">
+                            体验RFID芯片及传感器集成技术，评估系统协同能力
+                        </td>
+                        <td class="focus-cell">
+                            <div class="focus-point">智能轮胎对整车CAN/LIN总线的接入方式</div>
+                            <div class="focus-point">实时数据采集接口与厂商展示案例</div>
+                            <div class="focus-point">轮胎传感器与ADAS系统协同工作的安全策略</div>
+                        </td>
+                    </tr>
+                    
+                    <!-- 自密封与静音材料 -->
+                    <tr>
+                        <td class="area-cell">
+                            <div class="icon-area">
+                                <i class="fas fa-volume-mute"></i>
+                                <span>自密封与静音材料</span>
+                            </div>
+                        </td>
+                        <td class="objective-cell">
+                            了解自密封胶层与静音绵在不同胎压与路况下的表现
+                        </td>
+                        <td class="focus-cell">
+                            <div class="focus-point">自愈层厚度与材料配方；成本与普通轮胎对比</div>
+                            <div class="focus-point">静音性能测试方法；与传统产品的噪声对比数据</div>
+                            <div class="focus-point">电动车对轮胎噪音控制的新要求与解决方案</div>
+                        </td>
+                    </tr>
+                    
+                    <!-- 低滚阻与绿色材料 -->
+                    <tr>
+                        <td class="area-cell">
+                            <div class="icon-area">
+                                <i class="fas fa-leaf"></i>
+                                <span>低滚阻与绿色材料</span>
+                                <span class="priority-tag high">优先</span>
+                            </div>
+                        </td>
+                        <td class="objective-cell">
+                            探索碳中和与可再生材料在降能耗中的应用
+                        </td>
+                        <td class="focus-cell">
+                            <div class="focus-point">生物基补强材料（如海洋硅藻体）配方与性能</div>
+                            <div class="focus-point">低滚阻测试数据；对电动车续航的实际影响</div>
+                            <div class="focus-point">材料成本与可量产性评估；节能效益分析</div>
+                        </td>
+                    </tr>
+                    
+                    <!-- AI配方与数字化加工 -->
+                    <tr>
+                        <td class="area-cell">
+                            <div class="icon-area">
+                                <i class="fas fa-brain"></i>
+                                <span>AI配方与数字化加工</span>
+                                <span class="priority-tag medium">中等</span>
+                            </div>
+                        </td>
+                        <td class="objective-cell">
+                            深入AI配方优化平台与3D打印胎面的工艺流程
+                        </td>
+                        <td class="focus-cell">
+                            <div class="focus-point">AI模型输入数据类型及优化周期；与传统研发效率对比</div>
+                            <div class="focus-point">3D打印样品的物理性能与批量化潜力</div>
+                            <div class="focus-point">设计-仿真-制造数字一体化流程的成本节约量化</div>
+                        </td>
+                    </tr>
+                    
+                    <!-- 滑移特性测试 -->
+                    <tr>
+                        <td class="area-cell">
+                            <div class="icon-area">
+                                <i class="fas fa-car-crash"></i>
+                                <span>滑移特性测试</span>
+                            </div>
+                        </td>
+                        <td class="objective-cell">
+                            考察新型滑移测试方法在成本与效率上的优势
+                        </td>
+                        <td class="focus-cell">
+                            <div class="focus-point">控制整车加速状态的测试装置布局；设备投入成本</div>
+                            <div class="focus-point">数据同步与算法处理流程；与传统方法的精度对比</div>
+                            <div class="focus-point">自动化测试程度与人力资源节约分析</div>
+                        </td>
+                    </tr>
+                    
+                    <!-- 自动化生产与硫化工艺 -->
+                    <tr>
+                        <td class="area-cell">
+                            <div class="icon-area">
+                                <i class="fas fa-industry"></i>
+                                <span>自动化生产与硫化</span>
+                                <span class="priority-tag high">优先</span>
+                            </div>
+                        </td>
+                        <td class="objective-cell">
+                            了解AGV自动换模、伺服电机驱动及自动充气技术对生产效率的提升
+                        </td>
+                        <td class="focus-cell">
+                            <div class="focus-point">设备布局与占地面积；单位时间产能提升比例</div>
+                            <div class="focus-point">节能量化指标(15-20%)与投资回报周期</div>
+                            <div class="focus-point">传统产线改造成本与技术方案细节</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200 flex items-start">
+                <div class="text-blue-800 mr-3 mt-1"><i class="fas fa-clipboard-check"></i></div>
+                <div>
+                    <p class="text-blue-800 font-medium">参观行动建议</p>
+                    <p class="text-sm text-blue-700">1. 重点关注标记"优先"的三大领域：智能化轮胎、低滚阻与绿色材料、自动化生产</p>
+                    <p class="text-sm text-blue-700">2. 提前准备针对性问题，特别是关于成本降低的具体数据和技术实施细节</p>
+                    <p class="text-sm text-blue-700">3. 收集各厂商解决方案的对比信息，形成技术评估矩阵，便于后续决策分析</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="text-sm text-gray-500">上海车展参观攻略 | 贝卡尔特技术研发视角</div>
+            <div class="text-sm text-gray-500">7</div>
+        </div>
+    </div>
+</body>
+</html>

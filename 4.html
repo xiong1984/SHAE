@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汽车行业发展趋势</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .slide-content {
+            padding: 50px 60px;
+            height: calc(100% - 100px);
+        }
+        .header {
+            height: 60px;
+            border-bottom: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+        .footer {
+            height: 40px;
+            border-top: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 120px);
+        }
+        .title {
+            color: #0a3d62;
+            line-height: 1.2;
+        }
+        .blue-bar {
+            height: 5px;
+            width: 80px;
+            background-color: #0a3d62;
+            margin-bottom: 20px;
+        }
+        .trend-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0a3d62;
+        }
+        .bullet-item {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            color: #4a5568;
+        }
+        .bullet-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #0a3d62;
+            border-radius: 50%;
+        }
+        .icon-bg {
+            background-color: rgba(10,61,98,0.1);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .chart-container {
+            height: 230px;
+            width: 100%;
+            position: relative;
+        }
+        .data-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #0a3d62;
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 0 8px 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <div class="logo">贝卡尔特研发中心</div>
+        </div>
+        
+        <div class="slide-content">
+            <h1 class="title text-3xl font-bold mb-4">汽车行业发展趋势</h1>
+            <div class="blue-bar"></div>
+            
+            <div class="grid grid-cols-2 gap-6 mt-6">
+                <!-- 电动化趋势 -->
+                <div class="trend-card relative">
+                    <div class="data-badge">70%+</div>
+                    <div class="flex items-center mb-4">
+                        <div class="icon-bg">
+                            <i class="fas fa-charging-station text-xl text-blue-800"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 ml-4">电动化与绿色化趋势</h2>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="evChart"></canvas>
+                    </div>
+                    
+                    <ul class="mt-4">
+                        <li class="bullet-item">新能源车型占比超70%，成为主流展示方向</li>
+                        <li class="bullet-item">各厂商普遍将电动化作为核心战略</li>
+                        <li class="bullet-item">高压平台与超充技术加速迭代(900V架构/1.2MW超充)</li>
+                    </ul>
+                </div>
+                
+                <!-- 智能化趋势 -->
+                <div class="trend-card">
+                    <div class="flex items-center mb-4">
+                        <div class="icon-bg">
+                            <i class="fas fa-microchip text-xl text-blue-800"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 ml-4">智能化全场景竞争</h2>
+                    </div>
+                    
+                    <div class="p-3 mb-4 bg-blue-50 rounded-lg border border-blue-100">
+                        <p class="text-blue-800 font-medium">技术竞争延伸至多领域，供应商积极展示整体解决方案</p>
+                    </div>
+                    
+                    <ul>
+                        <li class="bullet-item">AI系统驱动的智能座舱成为展会亮点</li>
+                        <li class="bullet-item">智能驾驶辅助系统迭代加速(华为ADS、小鹏XNGP)</li>
+                        <li class="bullet-item">4D数字座舱、定制香氛等跨界互动场景首次亮相</li>
+                        <li class="bullet-item">软件定义汽车(SDV)平台成为核心竞争领域</li>
+                    </ul>
+                </div>
+                
+                <!-- 多场景融合 -->
+                <div class="trend-card">
+                    <div class="flex items-center mb-4">
+                        <div class="icon-bg">
+                            <i class="fas fa-car-side text-xl text-blue-800"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 ml-4">多场景与跨界融合</h2>
+                    </div>
+                    
+                    <ul>
+                        <li class="bullet-item">从城市通勤到户外露营，整车与生活场景深度融合</li>
+                        <li class="bullet-item">双腔空气悬架提升多场景用车舒适性</li>
+                        <li class="bullet-item">移动办公、露营与共享出行等新使用场景兴起</li>
+                        <li class="bullet-item">mini厨房等跨界功能展现产品多元化趋势</li>
+                        <li class="bullet-item">豪华、家用、科技、混动等细分领域持续发力</li>
+                    </ul>
+                </div>
+                
+                <!-- 供应链协同 -->
+                <div class="trend-card">
+                    <div class="flex items-center mb-4">
+                        <div class="icon-bg">
+                            <i class="fas fa-link text-xl text-blue-800"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 ml-4">供应链协同深化</h2>
+                    </div>
+                    
+                    <ul>
+                        <li class="bullet-item">百强零部件供应商携前沿技术入展，展示整体解决方案</li>
+                        <li class="bullet-item">产业链上下游协同创新加速，跨国与本土厂商深度合作</li>
+                        <li class="bullet-item">轮胎供应商积极展示电动车专用轮胎解决方案</li>
+                        <li class="bullet-item">本土研发、生产一体化，加快"在地化"步伐</li>
+                    </ul>
+                    
+                    <div class="p-3 mt-4 bg-blue-50 rounded-lg border border-blue-100">
+                        <p class="text-blue-800"><i class="fas fa-lightbulb mr-2"></i><span class="font-medium">轮胎行业机遇：</span> 与整车厂协同开发电动车专用低滚阻、低成本耐用、低噪音轮胎并提供智能胎压监测解决方案</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="text-sm text-gray-500">上海车展参观攻略 | 贝卡尔特技术研发视角</div>
+            <div class="text-sm text-gray-500">4</div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 创建图表
+            var ctx = document.getElementById('evChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['新能源车型', '传统燃油车型'],
+                    datasets: [{
+                        data: [70, 30],
+                        backgroundColor: ['#0a3d62', '#e2e8f0'],
+                        borderColor: ['#ffffff', '#ffffff'],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                boxWidth: 12,
+                                padding: 15,
+                                font: {
+                                    family: "'Noto Sans SC', sans-serif",
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        });
+    </script>
+</body>
+</html>

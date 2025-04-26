@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>执行摘要与参观目的</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .slide-content {
+            padding: 50px 60px;
+            height: calc(100% - 100px);
+        }
+        .header {
+            height: 60px;
+            border-bottom: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+        .footer {
+            height: 40px;
+            border-top: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 120px);
+        }
+        .title {
+            color: #0a3d62;
+            line-height: 1.2;
+        }
+        .section-title {
+            color: #0a3d62;
+            font-weight: 600;
+        }
+        .blue-bar {
+            height: 5px;
+            width: 80px;
+            background-color: #0a3d62;
+            margin-bottom: 20px;
+        }
+        .bullet-point {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .bullet-point:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #0a3d62;
+            border-radius: 50%;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0a3d62;
+        }
+        .background-section {
+            background-color: rgba(10,61,98,0.05);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .objectives-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <div class="logo">贝卡尔特研发中心</div>
+        </div>
+        
+        <div class="slide-content">
+            <h1 class="title text-3xl font-bold mb-8">执行摘要与参观目的</h1>
+            
+            <div class="grid grid-cols-2 gap-10 h-full">
+                <div class="background-section">
+                    <h2 class="section-title text-xl mb-2">车展背景</h2>
+                    <div class="blue-bar"></div>
+                    
+                    <p class="mb-4">上海车展作为汽车行业技术与趋势的重要展示平台，具备以下特点：</p>
+                    
+                    <ul>
+                        <li class="bullet-point">汇集全球汽车制造商、零部件供应商及技术专家，展示前沿技术解决方案</li>
+                        <li class="bullet-point">不仅涵盖整车技术，也包括轮胎等关键零部件的创新展示</li>
+                        <li class="bullet-point">新能源车型占比超70%，前沿技术加速迭代</li>
+                        <li class="bullet-point">连接技术与市场的双向平台，反映消费需求变化</li>
+                    </ul>
+                    
+                    <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                        <p class="text-sm text-blue-800"><i class="fas fa-lightbulb mr-2"></i>车展为研发团队提供宝贵的市场洞察与技术灵感，帮助团队拓宽视野，促进创新思维</p>
+                    </div>
+                </div>
+                
+                <div class="objectives-section">
+                    <h2 class="section-title text-xl mb-2">参观目的</h2>
+                    <div class="blue-bar"></div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-medium text-gray-800 mb-2"><i class="fas fa-search text-blue-700 mr-2"></i>技术洞察</h3>
+                        <ul>
+                            <li class="bullet-point">深入了解轮胎领域最新技术发展与创新方向</li>
+                            <li class="bullet-point">寻找能够大幅降低成本的突破性技术方案</li>
+                            <li class="bullet-point">观察轮胎与整车技术的融合趋势与协同创新</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-medium text-gray-800 mb-2"><i class="fas fa-chart-line text-blue-700 mr-2"></i>市场洞察</h3>
+                        <ul>
+                            <li class="bullet-point">直观感受行业动态和客户需求变化</li>
+                            <li class="bullet-point">了解竞争对手的技术路线与产品策略</li>
+                            <li class="bullet-point">评估新能源车市场对轮胎产品的差异化需求</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-medium text-gray-800 mb-2"><i class="fas fa-bullseye text-blue-700 mr-2"></i>目标价值</h3>
+                        <ul>
+                            <li class="bullet-point">将技术创新与市场需求更好结合，提升项目实用性</li>
+                            <li class="bullet-point">通过标杆对比，促进团队自我反思与工作改进</li>
+                            <li class="bullet-point">拓展行业人脉，寻找潜在合作伙伴</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="text-sm text-gray-500">上海车展参观攻略 | 贝卡尔特技术研发视角</div>
+            <div class="text-sm text-gray-500">2</div>
+        </div>
+    </div>
+</body>
+</html>

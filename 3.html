@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研发聚焦</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .slide-content {
+            padding: 50px 60px;
+            height: calc(100% - 100px);
+        }
+        .header {
+            height: 60px;
+            border-bottom: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+        .footer {
+            height: 40px;
+            border-top: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 120px);
+        }
+        .title {
+            color: #0a3d62;
+            line-height: 1.2;
+        }
+        .blue-bar {
+            height: 5px;
+            width: 80px;
+            background-color: #0a3d62;
+            margin-bottom: 20px;
+        }
+        .intent-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+            border-left: 4px solid #0a3d62;
+        }
+        .intent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(10,61,98,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .bullet-list {
+            margin-top: 15px;
+        }
+        .bullet-item {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 12px;
+            color: #4a5568;
+        }
+        .bullet-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #0a3d62;
+            border-radius: 50%;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0a3d62;
+        }
+        .intro-text {
+            max-width: 85%;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <div class="logo">贝卡尔特研发中心</div>
+        </div>
+        
+        <div class="slide-content">
+            <h1 class="title text-3xl font-bold mb-4">研发聚焦</h1>
+            <div class="blue-bar"></div>
+            
+            <p class="intro-text text-gray-600 mb-8">车展汇集众多厂商和技术专家，是团队拓展视野、获取创新灵感的绝佳平台。参观车展背后的战略期望包括：</p>
+            
+            <div class="grid grid-cols-3 gap-8 mt-6">
+                <!-- 突破性技术卡片 -->
+                <div class="intent-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-lightbulb text-2xl text-blue-800"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">发现突破性成本降低技术</h2>
+                    <p class="text-gray-600">发掘能够显著降低成本的创新技术方案，解决当前项目瓶颈</p>
+                    
+                    <ul class="bullet-list">
+                        <li class="bullet-item">关注AI配方优化与材料替代解决方案</li>
+                        <li class="bullet-item">评估自动化生产流程与智能硫化工艺</li>
+                        <li class="bullet-item">寻找可应用于我们项目的关键技术突破</li>
+                    </ul>
+                </div>
+                
+                <!-- 连接技术与市场卡片 -->
+                <div class="intent-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-handshake text-2xl text-blue-800"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">连接技术创新与市场需求</h2>
+                    <p class="text-gray-600">增强对市场和客户需求的全面理解，实现技术与市场的协同</p>
+                    
+                    <ul class="bullet-list">
+                        <li class="bullet-item">直观感受行业动态与客户需求变化</li>
+                        <li class="bullet-item">了解电动化、智能化对轮胎的新要求</li>
+                        <li class="bullet-item">将技术创新与市场需求更好结合，提升项目实用性</li>
+                    </ul>
+                </div>
+                
+                <!-- 标杆学习卡片 -->
+                <div class="intent-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-chart-line text-2xl text-blue-800"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">行业标杆学习与自我反思</h2>
+                    <p class="text-gray-600">接触先进技术与行业标杆，促进团队自我提升</p>
+                    
+                    <ul class="bullet-list">
+                        <li class="bullet-item">对标行业领先企业的技术路线与方法</li>
+                        <li class="bullet-item">反思现有工作方式，发现改进空间</li>
+                        <li class="bullet-item">建立内部技术评估与创新激励机制</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-10 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <p class="text-center text-blue-800">
+                    <i class="fas fa-quote-left mr-2 opacity-50"></i>
+                    通过深度参与车展，研发团队将提升技术视野与创新能力，最终拿出让客户满意的技术成果
+                    <i class="fas fa-quote-right ml-2 opacity-50"></i>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="text-sm text-gray-500">上海车展参观攻略 | 贝卡尔特技术研发视角</div>
+            <div class="text-sm text-gray-500">3</div>
+        </div>
+    </div>
+</body>
+</html>

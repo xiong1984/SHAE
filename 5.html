@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>整车技术关注重点</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .slide-content {
+            padding: 50px 60px;
+            height: calc(100% - 100px);
+        }
+        .header {
+            height: 60px;
+            border-bottom: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+        .footer {
+            height: 40px;
+            border-top: 1px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 120px);
+        }
+        .title {
+            color: #0a3d62;
+            line-height: 1.2;
+        }
+        .blue-bar {
+            height: 5px;
+            width: 80px;
+            background-color: #0a3d62;
+            margin-bottom: 20px;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0a3d62;
+        }
+        .tech-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            height: 100%;
+            border-top: 3px solid #0a3d62;
+            transition: transform 0.2s;
+        }
+        .tech-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+        .tech-icon {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(10,61,98,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+        .bullet-item {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .bullet-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            background-color: #0a3d62;
+            border-radius: 50%;
+        }
+        .relevance-tag {
+            display: inline-block;
+            background-color: rgba(10,61,98,0.08);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #0a3d62;
+            font-weight: 500;
+            margin-right: 8px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <div class="logo">贝卡尔特研发中心</div>
+        </div>
+        
+        <div class="slide-content">
+            <h1 class="title text-3xl font-bold mb-4">整车技术关注重点</h1>
+            <div class="blue-bar"></div>
+            
+            <p class="text-gray-600 mb-6">以下是六大关键技术领域及其对轮胎创新的影响，请重点观察评估并寻找合作机会</p>
+            
+            <div class="grid grid-cols-3 gap-5">
+                <!-- 新能源动力系统 -->
+                <div class="tech-card">
+                    <div class="flex items-center mb-3">
+                        <div class="tech-icon">
+                            <i class="fas fa-bolt text-blue-800"></i>
+                        </div>
+                        <h2 class="text-lg font-semibold text-gray-800">新能源动力系统</h2>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="relevance-tag"><i class="fas fa-weight-hanging mr-1"></i> 轻量化需求</span>
+                        <span class="relevance-tag"><i class="fas fa-tachometer-alt mr-1"></i> 低滚阻</span>
+                    </div>
+                    
+                    <ul class="mb-3">
+                        <li class="bullet-item">纯电、插混(EREV/PHEV)、氢燃料电池的多元化路线</li>
+                        <li class="bullet-item">800V/900V高压平台与超充技术（1.2MW全液冷）</li>
+                        <li class="bullet-item">CATL高能量密度电池与整车配重分布方案</li>
+                    </ul>
+                    
+                    <p class="text-xs text-blue-800 italic mt-auto">
+                        <i class="fas fa-search mr-1"></i> 关注高压电池布局对轮胎承载分布的影响
+                    </p>
+                </div>
+                
+                <!-- 智能驾驶与域控制 -->
+                <div class="tech-card">
+                    <div class="flex items-center mb-3">
+                        <div class="tech-icon">
+                            <i class="fas fa-microchip text-blue-800"></i>
+                        </div>
+                        <h2 class="text-lg font-semibold text-gray-800">智能驾驶与域控制</h2>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="relevance-tag"><i class="fas fa-wifi mr-1"></i> 传感集成</span>
+                        <span class="relevance-tag"><i class="fas fa-car-crash mr-1"></i> 安全要求</span>
+                    </div>
+                    
+                    <ul class="mb-3">
+                        <li class="bullet-item">L2+至L4级智能驾驶传感器融合方案</li>
+                        <li class="bullet-item">华为ADS、小鹏XNGP、比亚迪"天神之眼"</li>
+                        <li class="bullet-item">底盘域控制器架构对轮胎数据采集要求</li>
+                    </ul>
+                    
+                    <p class="text-xs text-blue-800 italic mt-auto">
+                        <i class="fas fa-search mr-1"></i> 评估智能轮胎传感器与域控制器的集成可能性
+                    </p>
+                </div>
+                
+                <!-- 软件定义与OTA -->
+                <div class="tech-card">
+                    <div class="flex items-center mb-3">
+                        <div class="tech-icon">
+                            <i class="fas fa-code text-blue-800"></i>
+                        </div>
+                        <h2 class="text-lg font-semibold text-gray-800">软件定义与OTA</h2>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="relevance-tag"><i class="fas fa-cloud-download-alt mr-1"></i> 远程更新</span>
+                        <span class="relevance-tag"><i class="fas fa-shield-alt mr-1"></i> 数据安全</span>
+                    </div>
+                    
+                    <ul class="mb-3">
+                        <li class="bullet-item">车载操作系统（本土/国际）与开发生态</li>
+                        <li class="bullet-item">OTA升级频率与安全验证流程</li>
+                        <li class="bullet-item">软件定义车辆(SDV)平台技术路线</li>
+                    </ul>
+                    
+                    <p class="text-xs text-blue-800 italic mt-auto">
+                        <i class="fas fa-search mr-1"></i> 探索轮胎智能监测系统与车载OS对接方案
+                    </p>
+                </div>
+                
+                <!-- 轻量化与新材料 -->
+                <div class="tech-card">
+                    <div class="flex items-center mb-3">
+                        <div class="tech-icon">
+                            <i class="fas fa-feather-alt text-blue-800"></i>
+                        </div>
+                        <h2 class="text-lg font-semibold text-gray-800">轻量化与新材料</h2>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="relevance-tag"><i class="fas fa-recycle mr-1"></i> 可持续材料</span>
+                        <span class="relevance-tag"><i class="fas fa-weight mr-1"></i> 减重技术</span>
+                    </div>
+                    
+                    <ul class="mb-3">
+                        <li class="bullet-item">高强度钢、铝合金、碳纤维复合材料应用</li>
+                        <li class="bullet-item">镁合金ASM桥与超薄流道板设计</li>
+                        <li class="bullet-item">生物基材料与可回收复合材料技术</li>
+                    </ul>
+                    
+                    <p class="text-xs text-blue-800 italic mt-auto">
+                        <i class="fas fa-search mr-1"></i> 评估可持续材料在轮胎中的应用潜力
+                    </p>
+                </div>
+                
+                <!-- 热管理与能效优化 -->
+                <div class="tech-card">
+                    <div class="flex items-center mb-3">
+                        <div class="tech-icon">
+                            <i class="fas fa-temperature-high text-blue-800"></i>
+                        </div>
+                        <h2 class="text-lg font-semibold text-gray-800">热管理与能效优化</h2>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="relevance-tag"><i class="fas fa-snowflake mr-1"></i> 温控性能</span>
+                        <span class="relevance-tag"><i class="fas fa-battery-full mr-1"></i> 续航提升</span>
+                    </div>
+                    
+                    <ul class="mb-3">
+                        <li class="bullet-item">R290环保冷媒集成化热管理模块</li>
+                        <li class="bullet-item">低温热泵与自发热系统一体化设计</li>
+                        <li class="bullet-item">轮胎与底盘空气动力学优化方案</li>
+                    </ul>
+                    
+                    <p class="text-xs text-blue-800 italic mt-auto">
+                        <i class="fas fa-search mr-1"></i> 了解热管理对轮胎工作温度的影响与控制
+                    </p>
+                </div>
+                
+                <!-- 用户出行新场景 -->
+                <div class="tech-card">
+                    <div class="flex items-center mb-3">
+                        <div class="tech-icon">
+                            <i class="fas fa-mountain text-blue-800"></i>
+                        </div>
+                        <h2 class="text-lg font-semibold text-gray-800">用户出行新场景</h2>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="relevance-tag"><i class="fas fa-campground mr-1"></i> 多地形适应</span>
+                        <span class="relevance-tag"><i class="fas fa-route mr-1"></i> 场景多元</span>
+                    </div>
+                    
+                    <ul class="mb-3">
+                        <li class="bullet-item">户外露营、移动办公、共享出行等新场景</li>
+                        <li class="bullet-item">双腔空气悬架提升多路况适应性</li>
+                        <li class="bullet-item">概念车与跨界装置（mini厨房、智能家居）</li>
+                    </ul>
+                    
+                    <p class="text-xs text-blue-800 italic mt-auto">
+                        <i class="fas fa-search mr-1"></i> 观察多场景用车对全地形轮胎的需求变化
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-3 bg-blue-50 border border-blue-200 rounded-lg flex items-center">
+                <div class="text-blue-800 mr-3"><i class="fas fa-lightbulb fa-2x"></i></div>
+                <div>
+                    <p class="text-blue-800 font-medium">轮胎研发关联点</p>
+                    <p class="text-sm text-blue-700">着重关注整车电动化、轻量化和智能化对轮胎的新要求，包括降低滚动阻力（提升续航）、降低噪音（提升舒适度）以及智能传感集成（提供实时数据）等方面，寻找技术合作机会。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="text-sm text-gray-500">上海车展参观攻略 | 贝卡尔特技术研发视角</div>
+            <div class="text-sm text-gray-500">5</div>
+        </div>
+    </div>
+</body>
+</html>
